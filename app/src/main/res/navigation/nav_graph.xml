@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="kz.sd.moneymates.fragments.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="kz.sd.moneymates.fragments.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment2"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_userDetailsFragment"
+            app:destination="@id/userDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/home"
+        android:name="kz.sd.moneymates.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_home_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/goal"
+        android:name="kz.sd.moneymates.fragments.GoalsFragment"
+        android:label="GoalsFragment" />
+    <fragment
+        android:id="@+id/learning"
+        android:name="kz.sd.moneymates.fragments.LearningFragment"
+        android:label="LearningFragment" />
+    <fragment
+        android:id="@+id/reward"
+        android:name="kz.sd.moneymates.fragments.RewardFragment"
+        android:label="RewardFragment" />
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="kz.sd.moneymates.fragments.UserDetailsFragment"
+        android:label="UserDetailsFragment" >
+        <action
+            android:id="@+id/action_userDetailsFragment_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_userDetailsFragment_to_ageFragment"
+            app:destination="@id/ageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ageFragment"
+        android:name="kz.sd.moneymates.fragments.AgeFragment"
+        android:label="AgeFragment" />
+</navigation>

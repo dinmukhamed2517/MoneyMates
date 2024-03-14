@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/home_icon"
+        android:title="Home"
+        />
+    <item
+        android:id="@+id/goal"
+        android:enabled="true"
+        android:icon="@drawable/goal_icon"
+        android:title="Goals"/>
+
+    <item
+        android:id="@+id/learning"
+        android:enabled="true"
+        android:icon="@drawable/learning_icon"
+        android:title="Learning"/>
+    <item
+        android:id="@+id/reward"
+        android:enabled="true"
+        android:icon="@drawable/reward_icon"
+        android:title="Reward">
+    </item>
+</menu>

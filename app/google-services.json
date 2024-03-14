@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1040076618846",
+    "project_id": "moneymates-c1f28",
+    "storage_bucket": "moneymates-c1f28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040076618846:android:1da56905b773ee1e0788cf",
+        "android_client_info": {
+          "package_name": "kz.sd.moneymates"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKOnkLD0x3Mv9MFze5ajkYSXn-OYAJF0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
