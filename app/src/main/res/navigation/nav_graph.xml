@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/home">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -36,6 +36,12 @@
         <action
             android:id="@+id/action_home_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_home_to_shoppingDetailsFragment"
+            app:destination="@id/shoppingDetailsFragment" />
+        <action
+            android:id="@+id/action_home_to_createSavingFragment"
+            app:destination="@id/createSavingFragment" />
     </fragment>
     <fragment
         android:id="@+id/goal"
@@ -64,4 +70,28 @@
         android:id="@+id/ageFragment"
         android:name="kz.sd.moneymates.fragments.AgeFragment"
         android:label="AgeFragment" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="kz.sd.moneymates.fragments.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profile_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingDetailsFragment"
+        android:name="kz.sd.moneymates.fragments.ShoppingDetailsFragment"
+        android:label="ShoppingDetailsFragment" >
+        <argument
+            android:name="shopping"
+            app:argType="kz.sd.moneymates.models.Shopping" />
+    </fragment>
+    <fragment
+        android:id="@+id/createSavingFragment"
+        android:name="kz.sd.moneymates.fragments.CreateSavingFragment"
+        android:label="CreateSavingFragment" >
+        <action
+            android:id="@+id/action_createSavingFragment_to_home"
+            app:destination="@id/home" />
+    </fragment>
 </navigation>

@@ -18,9 +18,9 @@
         android:icon="@drawable/learning_icon"
         android:title="Learning"/>
     <item
-        android:id="@+id/reward"
+        android:id="@+id/profile"
         android:enabled="true"
-        android:icon="@drawable/reward_icon"
-        android:title="Reward">
+        android:icon="@drawable/profile_icon"
+        android:title="Profile">
     </item>
 </menu>

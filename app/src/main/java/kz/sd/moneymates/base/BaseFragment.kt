@@ -79,6 +79,25 @@ abstract class BaseFragment<VB : ViewBinding>(private val inflate: Inflate<VB>) 
             dialog.dismiss()
         }
     }
+    protected fun showCustomCancelDialog(title: String, content: String) {
+        val dialog = Dialog(requireContext())
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.custom_cancel_dialog)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        val animationView: LottieAnimationView = dialog.findViewById(R.id.cancel_animation)
+        val titleTextView: TextView = dialog.findViewById(R.id.cancel_title)
+        val contentTextView: TextView = dialog.findViewById(R.id.cancel_content)
+
+        animationView.playAnimation()
+        titleTextView.text = title
+        contentTextView.text = content
+        dialog.show()
+        val button: Button = dialog.findViewById(R.id.cancel_ok_btn)
+        button.setOnClickListener {
+            dialog.dismiss()
+        }
+    }
 
     open fun onInit() {}
     open fun onBindView() {}

@@ -44,6 +44,19 @@ abstract class FRDBWrapper<T> {
             }
         }
     }
+
+    fun saveSavingPlanToList(value: Saving) {
+        val Id = db.getReference(getTableName()).push().key
+        if (Id != null) {
+            db.getReference(getTableName()).child("savings").child(Id).setValue(value)
+        }
+    }
+    fun deleteSavingFromList(value:String){
+        val ref = db.getReference(getTableName()).child("savings").child(value)
+        ref.removeValue()
+    }
+
+
     fun saveName(value: String) {
         db.getReference(getTableName()).child("name").setValue(value)
     }

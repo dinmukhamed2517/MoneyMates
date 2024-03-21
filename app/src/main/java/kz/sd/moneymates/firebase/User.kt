@@ -6,6 +6,6 @@ data class User(
     var age:Int? = null,
     var phoneNumber:Long? =null,
     var pictureUrl: String? = null,
-    var savingList: Map<String, Saving> = emptyMap(),
+    var savings: Map<String, Saving> = emptyMap(),
     var totalBalance:Double = 0.0,
 )
