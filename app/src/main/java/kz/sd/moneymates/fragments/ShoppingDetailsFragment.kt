@@ -29,6 +29,7 @@ class ShoppingDetailsFragment:BaseFragment<FragmentShoppingDetailsBinding>(Fragm
             title.text = shopping.title
             price.text = shopping.price.toString() + " KZT"
             img.setImageResource(shopping.img)
+            description.text = shopping.description
 
             backBtn.setOnClickListener {
                 findNavController().popBackStack()

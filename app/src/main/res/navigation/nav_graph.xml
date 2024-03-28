@@ -50,7 +50,11 @@
     <fragment
         android:id="@+id/learning"
         android:name="kz.sd.moneymates.fragments.LearningFragment"
-        android:label="LearningFragment" />
+        android:label="LearningFragment" >
+        <action
+            android:id="@+id/action_learning_to_learningDetailsFragment"
+            app:destination="@id/learningDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/reward"
         android:name="kz.sd.moneymates.fragments.RewardFragment"
@@ -93,5 +97,24 @@
         <action
             android:id="@+id/action_createSavingFragment_to_home"
             app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/learningDetailsFragment"
+        android:name="kz.sd.moneymates.fragments.LearningDetailsFragment"
+        android:label="LearningDetailsFragment" >
+        <argument
+            android:name="Learning"
+            app:argType="kz.sd.moneymates.firebase.Learning" />
+        <action
+            android:id="@+id/action_learningDetailsFragment_to_videoPlayerFragment"
+            app:destination="@id/videoPlayerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="kz.sd.moneymates.fragments.VideoPlayerFragment"
+        android:label="VideoPlayerFragment" >
+        <argument
+            android:name="video_url"
+            app:argType="string" />
     </fragment>
 </navigation>
