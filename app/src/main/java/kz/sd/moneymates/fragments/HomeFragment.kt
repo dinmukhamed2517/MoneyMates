@@ -68,6 +68,13 @@ class HomeFragment:BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflat
             )
         }
     }
+    override fun onStart() {
+        super.onStart()
+        if(firebaseAuth.currentUser == null){
+            findNavController().navigate(R.id.action_home_to_loginFragment)
+        }
+
+    }
 
     fun getShoppingList():List<Shopping>{
         return listOf(

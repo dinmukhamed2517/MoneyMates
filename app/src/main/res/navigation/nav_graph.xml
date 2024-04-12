@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/home">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -46,7 +46,11 @@
     <fragment
         android:id="@+id/goal"
         android:name="kz.sd.moneymates.fragments.GoalsFragment"
-        android:label="GoalsFragment" />
+        android:label="GoalsFragment" >
+        <action
+            android:id="@+id/action_goal_to_savingDetailsFragment"
+            app:destination="@id/savingDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/learning"
         android:name="kz.sd.moneymates.fragments.LearningFragment"
@@ -54,6 +58,9 @@
         <action
             android:id="@+id/action_learning_to_learningDetailsFragment"
             app:destination="@id/learningDetailsFragment" />
+        <action
+            android:id="@+id/action_learning_to_chatFragment"
+            app:destination="@id/chatFragment" />
     </fragment>
     <fragment
         android:id="@+id/reward"
@@ -108,6 +115,9 @@
         <action
             android:id="@+id/action_learningDetailsFragment_to_videoPlayerFragment"
             app:destination="@id/videoPlayerFragment" />
+        <action
+            android:id="@+id/action_learningDetailsFragment_to_test1Fragment"
+            app:destination="@id/test1Fragment" />
     </fragment>
     <fragment
         android:id="@+id/videoPlayerFragment"
@@ -116,5 +126,124 @@
         <argument
             android:name="video_url"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="kz.sd.moneymates.onboarding.FirstFragment"
+        android:label="FirstFragment" >
+        <action
+            android:id="@+id/action_firstFragment_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="kz.sd.moneymates.onboarding.SecondFragment"
+        android:label="SecondFragment" >
+        <action
+            android:id="@+id/action_secondFragment_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="kz.sd.moneymates.onboarding.ThirdFragment"
+        android:label="ThirdFragment" >
+        <action
+            android:id="@+id/action_thirdFragment_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="kz.sd.moneymates.onboarding.ViewPagerFragment"
+        android:label="ViewPagerFragment" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/savingDetailsFragment"
+        android:name="kz.sd.moneymates.fragments.SavingDetailsFragment"
+        android:label="SavingDetailsFragment" >
+        <argument
+            android:name="saving"
+            app:argType="kz.sd.moneymates.firebase.Saving" />
+    </fragment>
+    <fragment
+        android:id="@+id/test1Fragment"
+        android:name="kz.sd.moneymates.fragments.Test1Fragment"
+        android:label="Test1Fragment" >
+        <action
+            android:id="@+id/action_test1Fragment_to_test1ResultFragment"
+            app:destination="@id/test1ResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/test2Fragment"
+        android:name="kz.sd.moneymates.fragments.Test2Fragment"
+        android:label="Test2Fragment" >
+
+        <action
+            android:id="@+id/action_test2Fragment_to_test2ResultFragment"
+            app:destination="@id/test2ResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/test3Fragment"
+        android:name="kz.sd.moneymates.fragments.Test3Fragment"
+        android:label="Test3Fragment" >
+        <action
+            android:id="@+id/action_test3Fragment_to_test3ResultFragment"
+            app:destination="@id/test3ResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/test1ResultFragment"
+        android:name="kz.sd.moneymates.fragments.Test1ResultFragment"
+        android:label="Test1ResultFragment" >
+        <action
+            android:id="@+id/action_test1ResultFragment_to_test2Fragment"
+            app:destination="@id/test2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/test2ResultFragment"
+        android:name="kz.sd.moneymates.fragments.Test2ResultFragment"
+        android:label="Test2ResultFragment" >
+        <action
+            android:id="@+id/action_test2ResultFragment_to_test3Fragment"
+            app:destination="@id/test3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/test3ResultFragment"
+        android:name="kz.sd.moneymates.fragments.Test3ResultFragment"
+        android:label="Test3ResultFragment" >
+        <action
+            android:id="@+id/action_test3ResultFragment_to_testResultFragment"
+            app:destination="@id/testResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testResultFragment"
+        android:name="kz.sd.moneymates.fragments.TestResultFragment"
+        android:label="TestResultFragment" >
+        <action
+            android:id="@+id/action_testResultFragment_to_learningDetailsFragment"
+            app:destination="@id/learningDetailsFragment" />
+        <action
+            android:id="@+id/action_testResultFragment_to_learning"
+            app:destination="@id/learning" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="kz.sd.moneymates.fragments.ChatFragment"
+        android:label="ChatFragment" >
+        <action
+            android:id="@+id/action_chatFragment_to_learning"
+            app:destination="@id/learning" />
     </fragment>
 </navigation>

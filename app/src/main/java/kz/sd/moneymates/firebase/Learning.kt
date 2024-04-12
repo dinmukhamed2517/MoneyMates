@@ -9,7 +9,7 @@ import kotlinx.parcelize.Parcelize
 data class Learning(
     var id:Int,
     var title:String,
-    var reward:Float,
+    var reward:Double,
     var url:String,
     @DrawableRes
     var img:Int,

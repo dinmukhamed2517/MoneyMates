@@ -18,18 +18,21 @@ class LearningFragment:BaseFragment<FragmentLearningBinding>(FragmentLearningBin
         with(binding){
             learningList.adapter = adapter
             learningList.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-
         }
         adapter.submitList(getList())
 
         adapter.itemClick = {
             findNavController().navigate(LearningFragmentDirections.actionLearningToLearningDetailsFragment(it))
         }
+
+        binding.vaBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_learning_to_chatFragment)
+        }
     }
 
     fun getList():List<Learning>{
         return listOf(
-            Learning(1,"Where's money from?", 1.0f, "https://www.youtube.com/watch?v=fTTGALaRZoc", R.drawable.placeholder),
+            Learning(1,"Where's money from?", 2000.0, "https://www.youtube.com/watch?v=fTTGALaRZoc", R.drawable.placeholder),
 
         )
     }

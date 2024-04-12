@@ -63,6 +63,10 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.4")
     implementation ("com.google.android.material:material:1.10.0")
 
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+    implementation("androidx.activity:activity-ktx:1.8.0")
+
     implementation ("com.github.bumptech.glide:glide:4.13.0")
 
 
@@ -73,6 +77,17 @@ dependencies {
     implementation(libs.firebase.database.ktx)
     implementation(libs.firebase.storage.ktx)
     kapt ("com.google.dagger:hilt-compiler:2.46")
+
+
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+
+
+    implementation("androidx.core:core-splashscreen:1.0.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
 
     implementation ("com.airbnb.android:lottie:5.2.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")

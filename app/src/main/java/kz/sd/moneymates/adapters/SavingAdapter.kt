@@ -10,7 +10,7 @@ import kz.sd.moneymates.firebase.Saving
 
 class SavingAdapter:ListAdapter<Saving, BaseSavingViewHolder<*>>(SavingDiffUtils()) {
 
-
+    var itemClick:((Saving)->Unit)? = null
     class SavingDiffUtils:DiffUtil.ItemCallback<Saving>(){
         override fun areItemsTheSame(oldItem: Saving, newItem: Saving): Boolean {
             return oldItem.title == newItem.title
@@ -36,6 +36,9 @@ class SavingAdapter:ListAdapter<Saving, BaseSavingViewHolder<*>>(SavingDiffUtils
             with(binding){
                 title.text = item.title
                 amount.text  = item.amountOfMoney.toString()+" KZT"
+            }
+            itemView.setOnClickListener {
+                itemClick?.invoke(item)
             }
         }
 

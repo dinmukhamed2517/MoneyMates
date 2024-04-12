@@ -57,6 +57,18 @@ abstract class FRDBWrapper<T> {
     }
 
 
+    fun changeAmountOfMoney(value: Double, savingId: String) {
+        db.getReference(getTableName()).child("savings").child(savingId).child("amountOfMoney")
+            .setValue(value)
+    }
+    fun changeNotes(value: String, savingId: String) {
+        db.getReference(getTableName()).child("savings").child(savingId).child("note")
+            .setValue(value)
+    }
+    fun changeTotalBalance(value:Double){
+        db.getReference(getTableName()).child("totalBalance").setValue(value)
+    }
+
     fun saveName(value: String) {
         db.getReference(getTableName()).child("name").setValue(value)
     }

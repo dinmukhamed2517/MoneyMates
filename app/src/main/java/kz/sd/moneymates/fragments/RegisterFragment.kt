@@ -21,6 +21,9 @@ class RegisterFragment:BaseFragment<FragmentRegisterBinding>(FragmentRegisterBin
     override fun onBindView() {
         super.onBindView()
 
+        binding.backBtn.setOnClickListener{
+            findNavController().popBackStack()
+        }
         binding.registerBtn.setOnClickListener {
             val email = binding.emailInput.text.toString()
             val password = binding.passwordInput.text.toString()

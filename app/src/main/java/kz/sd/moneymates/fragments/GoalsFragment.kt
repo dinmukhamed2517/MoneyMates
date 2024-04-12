@@ -32,6 +32,10 @@ class GoalsFragment:BaseFragment<FragmentGoalsBinding>(FragmentGoalsBinding::inf
         with(binding){
             val adapter = SavingAdapter()
 
+
+            adapter.itemClick = {
+                findNavController().navigate(GoalsFragmentDirections.actionGoalToSavingDetailsFragment(it))
+            }
             savingList.adapter= adapter
             savingList.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
             userDao.getDataLiveData.observe(this@GoalsFragment){
